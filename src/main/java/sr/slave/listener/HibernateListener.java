@@ -17,6 +17,7 @@ public class HibernateListener implements ServletContextListener {
         try {
 
             HibernateUtil.getSessionFactory();
+
         } catch (Exception e) {
             logger.error("HibernateListener: {}", e.getMessage());
         }
@@ -26,7 +27,7 @@ public class HibernateListener implements ServletContextListener {
     public void contextDestroyed(ServletContextEvent event) {
 
         if (null != HibernateUtil.getSessionFactory()) {
-            HibernateUtil.shutdown();
+            HibernateUtil.getSessionFactory().close();
         }
 
         logger.debug("Hibernate session factory destroyed");
