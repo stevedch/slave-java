@@ -2,7 +2,7 @@ package sr.slave.listener;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import sr.slave.uitl.HibernateUtil;
+import sr.slave.util.HibernateUtil;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

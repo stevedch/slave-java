@@ -1,4 +1,4 @@
-package sr.slave.uitl;
+package sr.slave.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
